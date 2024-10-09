@@ -3,7 +3,7 @@
 
 MomEase is a productivity app designed specifically for busy single moms with disposable income. It aims to simplify their lives by providing an all-in-one platform to manage schedules, tasks, family activities, and access premium services like on-demand childcare, housekeeping, and personal shopping. With a user-friendly interface and personalized features, MomEase helps moms stay organized and find more time for themselves.
 
-App Evaluation
+# App Evaluation
 
   · Category: Productivity / Lifestyle
 
@@ -17,7 +17,7 @@ App Evaluation
 
 ---
 
-Product Spec
+# Product Spec
 
 1. User Stories (Required and Optional)
 
@@ -55,7 +55,7 @@ o As a user, I want to manage my profile and preferences so that the app can pro
 
 o As a user, I want to adjust app settings, such as notification preferences and privacy options.
 
-Optional Nice-to-have Stories
+# Optional Nice-to-have Stories
 
 · Recurring Tasks and Appointments
 
@@ -143,7 +143,7 @@ o In-app Messaging Screen
 
 3. Navigation
 
-Tab Navigation (Tab to Screen)
+# Tab Navigation (Tab to Screen)
 
 · Home
 
@@ -175,7 +175,7 @@ o More
 
 § Dropdown for additional features like Settings, Shopping List, Meal Planning.
 
-Flow Navigation (Screen to Screen)
+# Flow Navigation (Screen to Screen)
 
 · Login Screen
 
