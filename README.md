@@ -152,6 +152,9 @@ MomEase is a productivity app designed for busy single moms with disposable inco
   - **In-app Messaging Screen**
     - Chat interface with service providers or community members.
 
+
+
+
       **Schema**
 
 **Models**
@@ -206,8 +209,6 @@ MomEase is a productivity app designed for busy single moms with disposable inco
 
 - **(POST)** Create a new user account
 - **(POST)** Authenticate user with email and password
-
-
 
 
 
