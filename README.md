@@ -201,6 +201,9 @@ MomEase is a productivity app designed for busy single moms with disposable inco
 | items | Array of Strings | List of items added to the shopping list |
 | isShared | Boolean | Whether the list is shared with others |
 
+
+
+
 **Networking**
 
 **List of Network Requests by Screen**
