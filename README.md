@@ -207,9 +207,9 @@ MomEase is a productivity app designed for busy single moms with disposable inco
 - **(POST)** Create a new user account
 - **(POST)** Authenticate user with email and password
 
-vbnet
 
-Copy code
+
+
 
 // POST Request to authenticate user
 
@@ -240,9 +240,9 @@ print("Successfully authenticated")
 - **(PUT)** Update task details
 - **(DELETE)** Delete a task
 
-vbnet
 
-Copy code
+
+
 
 // GET Request to retrieve tasks
 
@@ -271,9 +271,9 @@ print("Successfully retrieved tasks")
 - **(PUT)** Update service booking status
 - **(DELETE)** Cancel a service booking
 
-scss
 
-Copy code
+
+
 
 // POST Request to book a service
 
