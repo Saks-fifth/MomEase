@@ -151,6 +151,160 @@ MomEase is a productivity app designed for busy single moms with disposable inco
     - View posts, send messages, join groups.
   - **In-app Messaging Screen**
     - Chat interface with service providers or community members.
+
+      **Schema**
+
+**Models**
+
+**User**
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| objectId | String | Unique id for the user (default field) |
+| username | String | User's unique username |
+| email | String | User's email address |
+| password | String | Hashed password for authentication |
+| profileImage | File | User's profile image |
+| familyProfiles | Array of Objects | Profiles of family members (children) |
+| preferences | Object | User preferences such as services, reminders |
+| linkedAccounts | Array of Strings | Accounts linked to other services (e.g., calendar) |
+
+**Task**
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| objectId | String | Unique id for the task (default field) |
+| title | String | Title of the task |
+| description | String | Detailed description of the task |
+| dueDate | DateTime | Due date for the task |
+| isCompleted | Boolean | Whether the task is marked as completed |
+| priority | String | Priority of the task (low, medium, high) |
+
+**ServiceBooking**
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| objectId | String | Unique id for the booking (default field) |
+| serviceType | String | Type of service booked (e.g., cleaning, childcare) |
+| serviceProvider | String | Name of the service provider |
+| date | DateTime | Date and time for the booking |
+| status | String | Status of the booking (confirmed, pending) |
+
+**ShoppingList**
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| objectId | String | Unique id for the shopping list |
+| items | Array of Strings | List of items added to the shopping list |
+| isShared | Boolean | Whether the list is shared with others |
+
+**Networking**
+
+**List of Network Requests by Screen**
+
+**Login Screen**
+
+- **(POST)** Create a new user account
+- **(POST)** Authenticate user with email and password
+
+vbnet
+
+Copy code
+
+// POST Request to authenticate user
+
+let query = PFQuery(className: "\_User")
+
+query.whereKey("email", equalTo: userEmail)
+
+query.whereKey("password", equalTo: hashedPassword)
+
+query.findObjectsInBackground { (user: \[PFObject\]?, error: Error?) in
+
+if let error = error {
+
+print(error.localizedDescription)
+
+} else if let user = user {
+
+print("Successfully authenticated")
+
+}
+
+}
+
+**Task Management Screen**
+
+- **(GET)** Fetch user's tasks
+- **(POST)** Create a new task
+- **(PUT)** Update task details
+- **(DELETE)** Delete a task
+
+vbnet
+
+Copy code
+
+// GET Request to retrieve tasks
+
+let query = PFQuery(className: "Task")
+
+query.whereKey("user", equalTo: currentUser)
+
+query.findObjectsInBackground { (tasks: \[PFObject\]?, error: Error?) in
+
+if let error = error {
+
+print(error.localizedDescription)
+
+} else if let tasks = tasks {
+
+print("Successfully retrieved tasks")
+
+}
+
+}
+
+**Service Booking Screen**
+
+- **(GET)** Fetch available services
+- **(POST)** Book a service
+- **(PUT)** Update service booking status
+- **(DELETE)** Cancel a service booking
+
+scss
+
+Copy code
+
+// POST Request to book a service
+
+let newBooking = PFObject(className: "ServiceBooking")
+
+newBooking\["serviceType"\] = selectedServiceType
+
+newBooking\["serviceProvider"\] = providerName
+
+newBooking\["date"\] = selectedDate
+
+newBooking\["status"\] = "Pending"
+
+newBooking.saveInBackground { (success, error) in
+
+if success {
+
+print("Service successfully booked")
+
+} else if let error = error {
+
+print(error.localizedDescription)
+
+}
+
+}
+
+**Profile Screen**
+
+- **(GET)** Fetch user profile data
+- **(PUT)** Update user profile (including family profiles and preferences)
    
    
 
