@@ -1,0 +1,119 @@
+.calendar-grid-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Event form container */
+.event-form {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 10px;
+    background: #f0f8ff; /* Light blue background */
+}
+
+.event-form h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0056b3; /* Darker blue */
+}
+
+/* Inputs and textarea styling */
+.event-form input,
+.event-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    font-size: 14px;
+    background: #e6f2ff; /* Very light blue background */
+}
+
+/* Button styling */
+.event-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #007bff; /* Primary blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-form button:hover {
+    background: #0056b3; /* Darker blue */
+}
+
+/* Calendar events section */
+.calendar-events {
+    margin-top: 20px;
+}
+
+/* Individual event styling */
+.calendar-event {
+    padding: 15px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #f0f8ff; /* Light blue background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-event h3 {
+    margin-bottom: 10px;
+    color: #0056b3; /* Darker blue */
+}
+
+.calendar-event p {
+    margin: 5px 0;
+    color: #333; /* Darker text for readability */
+}
+
+/* Action buttons for events */
+.event-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit button styling */
+.edit-event-button {
+    padding: 5px 10px;
+    background: #007bff; /* Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-event-button:hover {
+    background: #0056b3; /* Darker blue */
+}
+
+/* Delete button styling */
+.delete-event-button {
+    padding: 5px 10px;
+    background: #ff4d4d; /* Red for delete */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-event-button:hover {
+    background: #d93636; /* Darker red */
+}
+
+/* Error and success messages */
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 10px;
+}
